@@ -1,0 +1,18 @@
+load humanactivity.mat
+D = feat; % [24075 x 60] matrix containing 60 feature measurements from 24075 samples
+
+% compute eigvals
+[~,~,eigvals]=pca(D);
+eigvals
+
+
+% compute the cumulative_percent_variance_permode vector. 
+sum_eig_val=sum(eigvals);
+…N=0;
+for i=1:length(eigvals)
+  if cumulative_percent_variance_permode(i)>=99.9
+     if N==0
+      N=i   
+     end
+  end
+end
