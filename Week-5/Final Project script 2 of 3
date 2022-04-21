@@ -1,0 +1,19 @@
+% Define the filter size we will use in step 2:
+filtsize = 85;
+
+% Creating test image 'im' by splicing together two built in images.
+% Also zero-padding (adding zeros around the border) with half the 
+% filter size (filtsize) we will use so that the filter could be 
+% centered on any actual image pixel, including those near the border.
+% 'coins.png' contains bright nickels and dimes on a dark background
+% 'eight.tif' contains dark quarters on a bright background, so we invert it
+% to match 'coin…r = diameter/2;
+% Use double-for loops to check if each pixel lies in the foreground of the circle
+    for i = 1:size(filter) 
+        for j = 1:size(filter) 
+            if double((i-yc).^2 + (j-xc).^2)<= r.^2
+                  filter(i,j)=1;
+            end
+        end
+    end
+end
