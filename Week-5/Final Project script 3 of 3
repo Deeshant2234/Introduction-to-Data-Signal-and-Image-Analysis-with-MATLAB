@@ -1,0 +1,18 @@
+% Define the filter size we will use in step 2:
+filtsize = 85;
+
+% Creating test image 'im' by splicing together two built in images.
+% Also zero-padding (adding zeros around the border) with half the 
+% filter size (filtsize) we will use so that the filter could be 
+% centered on any actual image pixel, including those near the border.
+% 'coins.png' contains bright nickels and dimes on a dark background
+% 'eight.tif' contains dark quarters on a bright background, so we invert it
+% to match 'coin…        col='g'; 
+    else 
+        coinvalue=25; 
+        x_plot=x+rQ*cos(rads); 
+        y_plot=y+rQ*sin(rads); 
+        col='m'; 
+    end 
+    plot(x_plot,y_plot,col); 
+end
